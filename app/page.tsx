@@ -11,7 +11,7 @@ export default function Home() {
   /* Sticky nav on scroll */
   useEffect(() => {
     const nav = document.getElementById('main-nav')
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60)
+    const onScroll = () => nav?.classList.toggle('scrolled', window.scrollY > 60)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
